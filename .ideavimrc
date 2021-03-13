@@ -1,0 +1,38 @@
+" set viminfo
+set viminfo='100,<50,s10,h,f1
+" make system clipboard sync unnamedplus register
+set clipboard^=unnamed,unnamedplus
+" keep cursor at center of buffer
+set scrolloff=12
+" enable highlight-search
+set hls
+" set virtualedit=block
+set virtualedit=block
+" enable incremental search
+set incsearch
+
+" ________________________ enable / disable Pulgins ____________________________
+" enable vim-surround
+set surround
+
+" enable vim-exchange
+set exchange
+
+" ______________________ Use the power of IJ and Vim ___________________________
+set ideajoin
+
+set ideamarks
+
+" ______________________________ Key Mapping ___________________________________
+nnoremap <C-n> 3j
+nnoremap <C-p> 3k
+nnoremap <Tab> i<Tab><Esc>l
+vnoremap <tab> :action EditorIndentSelection<CR>
+nnoremap ,r :action RenameElement<CR>
+nnoremap ,b :action ShowBookmarks<CR>
+
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+
+" command! M action ShowBookmarks
+
