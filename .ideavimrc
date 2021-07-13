@@ -24,15 +24,21 @@ set ideajoin
 set ideamarks
 
 " ______________________________ Key Mapping ___________________________________
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+
 nnoremap <C-n> 3j
 nnoremap <C-p> 3k
 nnoremap <Tab> i<Tab><Esc>l
 vnoremap <tab> :action EditorIndentSelection<CR>
+
 nnoremap ,r :action RenameElement<CR>
 nnoremap ,b :action ShowBookmarks<CR>
+nnoremap ,v :action IntroduceVariable<CR>
 
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
+inoremap <C-i> :action Forward<CR>
+inoremap <C-o> :action Back<CR>
 
-" command! M action ShowBookmarks
 
