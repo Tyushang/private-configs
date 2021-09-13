@@ -12,12 +12,16 @@ set virtualedit=block
 set incsearch
 
 " ________________________ enable / disable Pulgins ____________________________
-" enable vim-surround
+" Enable EasyMotion and AceJump: https://github.com/AlexPl292/IdeaVim-EasyMotion
+set easymotion
+" Enable vim-surround: https://github.com/tpope/vim-surround
 set surround
-
-" enable vim-exchange
+" Enable vim-exchange
 set exchange
-
+" Enable ReplaceWithRegister: https://github.com/vim-scripts/ReplaceWithRegister
+set ReplaceWithRegister
+" Enable textobj-entire: https://github.com/kana/vim-textobj-entire
+set textobj-entire
 " ______________________ Use the power of IJ and Vim ___________________________
 set ideajoin
 
@@ -37,6 +41,9 @@ vnoremap <tab> :action EditorIndentSelection<CR>
 nnoremap ,r :action RenameElement<CR>
 nnoremap ,b :action ShowBookmarks<CR>
 nnoremap ,v :action IntroduceVariable<CR>
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
 
 inoremap <C-i> :action Forward<CR>
 inoremap <C-o> :action Back<CR>
