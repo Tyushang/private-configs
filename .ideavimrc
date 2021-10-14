@@ -45,7 +45,7 @@ nnoremap ,v :action IntroduceVariable<CR>
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 
-inoremap <C-i> :action Forward<CR>
-inoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+nnoremap <C-o> :action Back<CR>
 
 
