@@ -98,8 +98,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/data/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/data/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/data/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/data/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 # ______________________________User-Added______________________________
-PATH=/home/lmd/anaconda3/bin:/home/lmd/anaconda3/condabin:$PATH
+# PATH=/data/anaconda3/bin/conda:/data/anaconda3/condabin:$PATH
 PATH=$PATH:/home/lmd/bin:/home/lmd/.local/bin:/usr/local/cuda/bin:/snap/bin
 PATH=$PATH:/opt/VirtualGL/bin:/opt/TurboVNC/bin
 

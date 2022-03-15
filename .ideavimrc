@@ -48,4 +48,6 @@ nnoremap ]] :action MethodDown<CR>
 nnoremap <C-i> :action Forward<CR>
 nnoremap <C-o> :action Back<CR>
 
+nnoremap g; :action JumpToLastChange<Enter>
+nnoremap g, :action JumpToNextChange<Enter>
 
