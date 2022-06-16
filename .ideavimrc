@@ -36,16 +36,23 @@ inoremap <C-f> <Right>
 nnoremap <C-n> 3j
 nnoremap <C-p> 3k
 nnoremap <Tab> i<Tab><Esc>l
-vnoremap <tab> :action EditorIndentSelection<CR>
 
-nnoremap ,r :action RenameElement<CR>
-nnoremap ,b :action ShowBookmarks<CR>
-nnoremap ,v :action IntroduceVariable<CR>
+" https://github.com/JetBrains/ideavim#executing-ide-actions
+" - For the mappings you can use a special <Action> keyword. Don't forget the parentheses.
+" - E.g. map gh <Action>(ShowErrorDescription) <- execute hover on gh.
+" - Mappings to <Action> don't work with noremap.
+vmap <tab> <Action>(EditorIndentSelection)
 
-nnoremap [[ :action MethodUp<CR>
-nnoremap ]] :action MethodDown<CR>
+nmap ,c <Action>(CallHierarchy)
+nmap ,r <Action>(RenameElement)
+nmap ,v <Action>(IntroduceVariable)
+nmap ,b <Action>(ShowBookmarks)
+nmap ,m <Action>(ToggleBookmark) \| <Action>(Bookmarks)
 
-nnoremap <C-i> :action Forward<CR>
-nnoremap <C-o> :action Back<CR>
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+
+nmap <C-i> <Action>(Forward)
+nmap <C-o> <Action>(Back)
 
 
