@@ -55,4 +55,6 @@ nmap ]] <Action>(MethodDown)
 nmap <C-i> <Action>(Forward)
 nmap <C-o> <Action>(Back)
 
+nnoremap g; :action JumpToLastChange<Enter>
+nnoremap g, :action JumpToNextChange<Enter>
 

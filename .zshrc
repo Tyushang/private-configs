@@ -114,6 +114,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# PATH=/data/anaconda3/bin/conda:/data/anaconda3/condabin:$PATH
 PATH=$PATH:/home/lmd/bin:/home/lmd/.local/bin:/usr/local/cuda/bin:/snap/bin
 PATH=$PATH:/opt/VirtualGL/bin:/opt/TurboVNC/bin
 
