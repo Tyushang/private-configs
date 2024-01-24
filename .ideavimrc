@@ -14,14 +14,15 @@ set incsearch
 " ________________________ enable / disable Pulgins ____________________________
 " enable vim-surround
 set surround
-
 " enable vim-exchange
 set exchange
 
 " ______________________ Use the power of IJ and Vim ___________________________
 set ideajoin
-
 set ideamarks
+
+" ________________________ Config IdeaVimExtension _____________________________
+set keep-english-in-normal-and-restore-in-insert
 
 " ______________________________ Key Mapping ___________________________________
 nnoremap <C-n> 3j
